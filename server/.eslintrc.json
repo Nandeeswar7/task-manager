@@ -1,0 +1,20 @@
+{
+    "root": true,
+    "parser": "@typescript-eslint/parser",
+    "plugins": ["@typescript-eslint"],
+    "extends": [
+        "eslint:recommended",
+        "plugin:@typescript-eslint/recommended"
+    ],
+    "rules": {
+        "@typescript-eslint/explicit-function-return-type": "warn", // Requires explicit return types on functions
+        "@typescript-eslint/no-unused-vars": ["error", { "argsIgnorePattern": "^_" }], // Disallows unused variables, ignoring those starting with _
+        "@typescript-eslint/no-explicit-any": "warn",              // Disallows usage of the any type
+        "@typescript-eslint/consistent-type-assertions": "error",  // Enforces consistent usage of type assertions
+        "@typescript-eslint/no-inferrable-types": "warn",           // Disallows explicit type declarations for variables or parameters initialized to a number, string, or boolean
+        "indent": ["error", 4],             // Enforces consistent indentation of 2 spaces
+        "semi": ["error", "always"],        // Requires semicolons at the end of statements
+        "comma-dangle": ["error", "always-multiline"], // Requires trailing commas in multiline object literals
+        "eol-last": ["error", "always"]     // Requires newline at the end of files
+    }
+}
